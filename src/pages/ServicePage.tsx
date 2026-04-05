@@ -185,12 +185,12 @@ const ServicePage = () => {
                         <CheckCircle2 className="w-4 h-4" /> Free Consultation
                       </Button>
                     </Link>
-                    <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="block">
+                    <a href="https://wa.me/919891192069" target="_blank" rel="noopener noreferrer" className="block">
                       <Button variant="outline" className="w-full gap-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                         <MessageCircle className="w-4 h-4" /> WhatsApp Now
                       </Button>
                     </a>
-                    <a href="tel:+919999999999" className="block">
+                    <a href="tel:+919891192069" className="block">
                       <Button variant="outline" className="w-full gap-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                         <Phone className="w-4 h-4" /> Call Us
                       </Button>

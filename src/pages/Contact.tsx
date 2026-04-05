@@ -14,9 +14,9 @@ const fadeUp = {
 };
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", value: "+91 99999 99999", href: "tel:+919999999999" },
-  { icon: Mail, label: "Email", value: "info@pknconsultancy.com", href: "mailto:info@pknconsultancy.com" },
-  { icon: MessageCircle, label: "WhatsApp", value: "Chat with us", href: "https://wa.me/919999999999" },
+  { icon: Phone, label: "Phone", value: "+91 98911 92069", href: "tel:+919891192069" },
+  { icon: Mail, label: "Email", value: "pknconsultancy06@gmail.com", href: "mailto:pknconsultancy06@gmail.com" },
+  { icon: MessageCircle, label: "WhatsApp", value: "Chat with us", href: "https://wa.me/919891192069" },
   { icon: MapPin, label: "Location", value: "India", href: "#" },
 ];
 
@@ -138,7 +138,7 @@ const Contact = () => {
                   <CheckCircle2 className="w-10 h-10 mx-auto mb-4 opacity-90" />
                   <h3 className="font-display text-xl font-bold mb-2">Free Consultation</h3>
                   <p className="text-sm opacity-90 mb-4">Get expert advice on your tax and business needs at no cost.</p>
-                  <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/919891192069" target="_blank" rel="noopener noreferrer">
                     <Button variant="secondary" className="gap-2">
                       <MessageCircle className="w-4 h-4" /> WhatsApp Us
                     </Button>

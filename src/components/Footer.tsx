@@ -35,7 +35,7 @@ const Footer = () => (
           </p>
           <div className="flex gap-3">
             <a
-              href="https://wa.me/919999999999"
+              href="https://wa.me/919891192069"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-secondary-foreground hover:opacity-90 transition"
@@ -44,7 +44,7 @@ const Footer = () => (
               <Phone className="w-4 h-4" />
             </a>
             <a
-              href="mailto:info@pknconsultancy.com"
+              href="mailto:pknconsultancy06@gmail.com"
               className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground hover:opacity-90 transition"
               aria-label="Email"
             >
@@ -84,11 +84,11 @@ const Footer = () => (
           <ul className="space-y-4 text-sm opacity-70">
             <li className="flex gap-3 items-start">
               <Phone className="w-4 h-4 mt-0.5 shrink-0" />
-              <span>+91 99999 99999</span>
+              <span>+91 98911 92069</span>
             </li>
             <li className="flex gap-3 items-start">
               <Mail className="w-4 h-4 mt-0.5 shrink-0" />
-              <span>info@pknconsultancy.com</span>
+              <span>pknconsultancy06@gmail.com</span>
             </li>
             <li className="flex gap-3 items-start">
               <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
