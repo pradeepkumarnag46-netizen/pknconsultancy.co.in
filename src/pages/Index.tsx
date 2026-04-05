@@ -111,7 +111,7 @@ const Index = () => (
                 Get Free Consultation <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
-            <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/919891192069" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="gap-2 text-base px-8">
                 <MessageCircle className="w-4 h-4" /> WhatsApp Now
               </Button>
@@ -317,7 +317,7 @@ const Index = () => (
                 <CheckCircle2 className="w-4 h-4" /> Get Free Consultation
               </Button>
             </Link>
-            <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/919891192069" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="gap-2 text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                 <Phone className="w-4 h-4" /> WhatsApp Now
               </Button>

@@ -45,7 +45,7 @@ const Header = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="https://wa.me/919999999999"
+            href="https://wa.me/919891192069"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -85,7 +85,7 @@ const Header = () => {
               </Link>
             ))}
             <div className="flex gap-2 px-4 pt-2">
-              <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="flex-1">
+              <a href="https://wa.me/919891192069" target="_blank" rel="noopener noreferrer" className="flex-1">
                 <Button variant="outline" size="sm" className="w-full gap-2">
                   <Phone className="w-4 h-4" /> WhatsApp
                 </Button>
