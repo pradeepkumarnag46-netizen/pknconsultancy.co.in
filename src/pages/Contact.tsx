@@ -17,7 +17,7 @@ const contactInfo = [
   { icon: Phone, label: "Phone", value: "+91 98911 92069", href: "tel:+919891192069" },
   { icon: Mail, label: "Email", value: "pknconsultancy06@gmail.com", href: "mailto:pknconsultancy06@gmail.com" },
   { icon: MessageCircle, label: "WhatsApp", value: "Chat with us", href: "https://wa.me/919891192069" },
-  { icon: MapPin, label: "Location", value: "India", href: "#" },
+  { icon: MapPin, label: "Location", value: "A-345, Pradhan Enclave, Burari, Delhi-110084", href: "#" },
 ];
 
 const Contact = () => {
