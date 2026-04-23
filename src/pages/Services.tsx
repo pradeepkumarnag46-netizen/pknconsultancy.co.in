@@ -69,11 +69,11 @@ const Services = () => (
       <div className="container text-center">
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Need a Custom Solution?</h2>
         <p className="text-lg opacity-90 max-w-xl mx-auto mb-8">
-          Contact us for a free consultation. We will find the right services for your business needs.
+          Reach out and we will find the right services for your business needs.
         </p>
         <Link to="/contact">
           <Button size="lg" variant="secondary" className="gap-2 text-base px-8 shadow-lg">
-            <CheckCircle2 className="w-4 h-4" /> Get Free Consultation
+            <CheckCircle2 className="w-4 h-4" /> Contact Us
           </Button>
         </Link>
       </div>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/pkn-logo.jpeg";
 
 const services = [
   { label: "GST Registration", to: "/services/gst" },
@@ -24,10 +25,8 @@ const Footer = () => (
     <div className="container py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-display font-bold text-lg">P</span>
-            </div>
+          <div className="flex items-center gap-3 mb-4">
+            <img src={logo} alt="PKN Consultancy logo" className="w-10 h-10 rounded-lg object-cover" />
             <span className="font-display font-bold text-lg">PKN Consultancy</span>
           </div>
           <p className="text-sm opacity-70 leading-relaxed mb-6">

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/pkn-logo.jpeg";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -17,10 +17,8 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-display font-bold text-xl">P</span>
-          </div>
+        <Link to="/" className="flex items-center gap-3">
+          <img src={logo} alt="PKN Consultancy logo" className="w-11 h-11 md:w-12 md:h-12 rounded-lg object-cover shadow-sm" />
           <div className="flex flex-col leading-tight">
             <span className="font-display font-bold text-lg text-foreground tracking-tight">PKN Consultancy</span>
             <span className="text-[10px] text-muted-foreground tracking-widest uppercase">Business & Tax Solutions</span>
@@ -42,21 +40,6 @@ const Header = () => {
             </Link>
           ))}
         </nav>
-
-        <div className="hidden md:flex items-center gap-3">
-          <a
-            href="https://wa.me/919891192069"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button variant="outline" size="sm" className="gap-2">
-              <Phone className="w-4 h-4" /> WhatsApp
-            </Button>
-          </a>
-          <Link to="/contact">
-            <Button size="sm">Free Consultation</Button>
-          </Link>
-        </div>
 
         <button
           onClick={() => setOpen(!open)}
@@ -84,16 +67,6 @@ const Header = () => {
                 {l.label}
               </Link>
             ))}
-            <div className="flex gap-2 px-4 pt-2">
-              <a href="https://wa.me/919891192069" target="_blank" rel="noopener noreferrer" className="flex-1">
-                <Button variant="outline" size="sm" className="w-full gap-2">
-                  <Phone className="w-4 h-4" /> WhatsApp
-                </Button>
-              </a>
-              <Link to="/contact" className="flex-1" onClick={() => setOpen(false)}>
-                <Button size="sm" className="w-full">Consultation</Button>
-              </Link>
-            </div>
           </nav>
         </div>
       )}

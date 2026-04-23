@@ -104,18 +104,13 @@ const Index = () => (
           </motion.p>
           <motion.div
             initial="hidden" animate="visible" variants={fadeUp} custom={3}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex justify-center"
           >
             <Link to="/contact">
               <Button size="lg" className="gap-2 text-base px-8 shadow-lg shadow-primary/20">
-                Get Free Consultation <ArrowRight className="w-4 h-4" />
+                Contact Us <ArrowRight className="w-4 h-4" />
               </Button>
             </Link>
-            <a href="https://wa.me/919891192069" target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="gap-2 text-base px-8">
-                <MessageCircle className="w-4 h-4" /> WhatsApp Now
-              </Button>
-            </a>
           </motion.div>
         </div>
       </div>
@@ -311,17 +306,12 @@ const Index = () => (
           <p className="text-lg opacity-90 max-w-xl mx-auto mb-8">
             Get Free Consultation Today. Our experts are ready to help you with all your business and compliance needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link to="/contact">
               <Button size="lg" variant="secondary" className="gap-2 text-base px-8 shadow-lg">
-                <CheckCircle2 className="w-4 h-4" /> Get Free Consultation
+                <CheckCircle2 className="w-4 h-4" /> Contact Us
               </Button>
             </Link>
-            <a href="https://wa.me/919891192069" target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="gap-2 text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                <Phone className="w-4 h-4" /> WhatsApp Now
-              </Button>
-            </a>
           </div>
         </motion.div>
       </div>
