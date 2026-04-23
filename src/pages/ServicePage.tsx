@@ -178,24 +178,12 @@ const ServicePage = () => {
               <Card className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground border-0 sticky top-24">
                 <CardContent className="p-8 text-center">
                   <h3 className="font-display text-xl font-bold mb-2">Get Started Today</h3>
-                  <p className="text-sm opacity-90 mb-6">Free consultation with our experts. No obligations.</p>
-                  <div className="space-y-3">
-                    <Link to="/contact" className="block">
-                      <Button variant="secondary" className="w-full gap-2">
-                        <CheckCircle2 className="w-4 h-4" /> Free Consultation
-                      </Button>
-                    </Link>
-                    <a href="https://wa.me/919891192069" target="_blank" rel="noopener noreferrer" className="block">
-                      <Button variant="outline" className="w-full gap-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                        <MessageCircle className="w-4 h-4" /> WhatsApp Now
-                      </Button>
-                    </a>
-                    <a href="tel:+919891192069" className="block">
-                      <Button variant="outline" className="w-full gap-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                        <Phone className="w-4 h-4" /> Call Us
-                      </Button>
-                    </a>
-                  </div>
+                  <p className="text-sm opacity-90 mb-6">Reach out to our experts and we'll guide you through the process.</p>
+                  <Link to="/contact" className="block">
+                    <Button variant="secondary" className="w-full gap-2">
+                      <CheckCircle2 className="w-4 h-4" /> Contact Us
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             </div>
