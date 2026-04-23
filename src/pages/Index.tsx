@@ -304,7 +304,7 @@ const Index = () => (
             Need Help with GST, Tax, or Business Setup?
           </h2>
           <p className="text-lg opacity-90 max-w-xl mx-auto mb-8">
-            Get Free Consultation Today. Our experts are ready to help you with all your business and compliance needs.
+            Our experts are ready to help you with all your business and compliance needs.
           </p>
           <div className="flex justify-center">
             <Link to="/contact">
