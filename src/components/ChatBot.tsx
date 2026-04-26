@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { MessageSquare, X, Send, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
@@ -116,13 +118,19 @@ const ChatBot = () => {
             {messages.map((m, i) => (
               <div key={i} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
                 <div
-                  className={`max-w-[85%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap ${
+                  className={`max-w-[85%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed ${
                     m.role === "user"
-                      ? "bg-primary text-primary-foreground rounded-br-sm"
+                      ? "bg-primary text-primary-foreground rounded-br-sm whitespace-pre-wrap"
                       : "bg-muted text-foreground rounded-bl-sm"
                   }`}
                 >
-                  {m.content}
+                  {m.role === "user" ? (
+                    m.content
+                  ) : (
+                    <div className="prose prose-sm max-w-none text-foreground [&_p]:my-1 [&_ul]:my-1.5 [&_ul]:pl-4 [&_ol]:my-1.5 [&_ol]:pl-4 [&_li]:my-0.5 [&_li]:marker:text-primary [&_strong]:text-primary [&_strong]:font-semibold [&_a]:text-primary [&_a]:underline [&_code]:bg-background [&_code]:px-1 [&_code]:rounded">
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>{m.content}</ReactMarkdown>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
