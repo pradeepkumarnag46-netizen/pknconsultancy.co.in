@@ -18,7 +18,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="PKN Consultancy logo" className="w-11 h-11 md:w-12 md:h-12 rounded-lg object-cover shadow-sm" />
+          <img src={logo} alt="PKN Consultancy logo" className="h-12 md:h-14 w-auto object-contain" />
           <div className="flex flex-col leading-tight">
             <span className="font-display font-bold text-lg text-foreground tracking-tight">PKN Consultancy</span>
             <span className="text-[10px] text-muted-foreground tracking-widest uppercase">Business & Tax Solutions</span>
