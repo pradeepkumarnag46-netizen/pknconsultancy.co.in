@@ -180,17 +180,35 @@ const Contact = () => {
                       </div>
                     </div>
                     <div>
-                      <label className="text-sm font-medium text-foreground mb-1.5 block">Message *</label>
+                      <div className="flex items-center justify-between mb-1.5">
+                        <label className="text-sm font-medium text-foreground">Message *</label>
+                        <button
+                          type="button"
+                          onClick={toggleVoiceInput}
+                          className={`inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-md border transition-colors ${
+                            listening
+                              ? "bg-destructive text-destructive-foreground border-destructive animate-pulse"
+                              : "bg-background border-border text-muted-foreground hover:text-foreground hover:bg-muted"
+                          }`}
+                          aria-label={listening ? "Stop voice input" : "Start voice input"}
+                        >
+                          {listening ? <MicOff className="w-3.5 h-3.5" /> : <Mic className="w-3.5 h-3.5" />}
+                          {listening ? "Listening..." : "Voice to Text"}
+                        </button>
+                      </div>
                       <Textarea
                         required value={form.message}
                         onChange={(e) => setForm({ ...form, message: e.target.value })}
-                        placeholder="Tell us about your requirements..."
+                        placeholder="Tell us about your requirements... or click the mic to speak"
                         rows={5}
                         maxLength={1000}
                       />
+                      <p className="text-xs text-muted-foreground mt-1">
+                        {form.message.length}/1000 characters
+                      </p>
                     </div>
-                    <Button type="submit" size="lg" className="gap-2 w-full sm:w-auto">
-                      <Send className="w-4 h-4" /> Send Message
+                    <Button type="submit" size="lg" disabled={submitting} className="gap-2 w-full sm:w-auto">
+                      <Send className="w-4 h-4" /> {submitting ? "Sending..." : "Send Message"}
                     </Button>
                   </form>
                 </CardContent>
