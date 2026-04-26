@@ -24,14 +24,96 @@ const contactInfo = [
 const Contact = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
+  const [submitting, setSubmitting] = useState(false);
+  const [listening, setListening] = useState(false);
+  const recognitionRef = useRef<any>(null);
+  const baseMessageRef = useRef<string>("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    return () => {
+      if (recognitionRef.current) {
+        try { recognitionRef.current.stop(); } catch {}
+      }
+    };
+  }, []);
+
+  const toggleVoiceInput = () => {
+    const SpeechRecognition =
+      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      toast({
+        title: "Voice input not supported",
+        description: "Please use Chrome or Edge browser for voice-to-text.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (listening) {
+      recognitionRef.current?.stop();
+      return;
+    }
+
+    const recognition = new SpeechRecognition();
+    recognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = "en-IN";
+
+    baseMessageRef.current = form.message ? form.message + " " : "";
+
+    recognition.onresult = (event: any) => {
+      let transcript = "";
+      for (let i = event.resultIndex; i < event.results.length; i++) {
+        transcript += event.results[i][0].transcript;
+      }
+      setForm((prev) => ({ ...prev, message: (baseMessageRef.current + transcript).slice(0, 1000) }));
+    };
+
+    recognition.onerror = (event: any) => {
+      setListening(false);
+      if (event.error !== "aborted" && event.error !== "no-speech") {
+        toast({
+          title: "Voice input error",
+          description: "Please allow microphone access and try again.",
+          variant: "destructive",
+        });
+      }
+    };
+
+    recognition.onend = () => setListening(false);
+
+    recognitionRef.current = recognition;
+    recognition.start();
+    setListening(true);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We will get back to you within 24 hours.",
-    });
-    setForm({ name: "", email: "", phone: "", service: "", message: "" });
+    setSubmitting(true);
+    try {
+      const { error } = await supabase.from("contact_submissions").insert({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        phone: form.phone.trim() || null,
+        service: form.service.trim() || null,
+        message: form.message.trim(),
+      });
+      if (error) throw error;
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We will get back to you within 24 hours.",
+      });
+      setForm({ name: "", email: "", phone: "", service: "", message: "" });
+    } catch (err) {
+      toast({
+        title: "Could not send message",
+        description: "Please try again or reach us on WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
