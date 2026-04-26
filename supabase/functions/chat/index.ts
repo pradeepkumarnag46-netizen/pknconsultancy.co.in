@@ -27,7 +27,15 @@ Formatting rules (ALWAYS follow):
 - **Bold** the most important keywords (service names, deadlines, key terms like **GST**, **ITR**, **TDS**, **Pvt Ltd**, **deadline**, **documents required**).
 - Whenever you list more than one item, steps, documents, or benefits, use a **bulleted list** (\`-\`) or **numbered list** (\`1.\`). Never cram multiple points into one paragraph.
 - Keep each bullet short (one line if possible).
-- Use a brief intro line, then the list, then an optional one-line closing/CTA.`;
+- Use a brief intro line, then the list, then an optional one-line closing/CTA.
+
+Conversation length rules (VERY IMPORTANT):
+- The FIRST 1-2 assistant replies in a conversation may give a short overview (intro + small list) to orient the user.
+- From the **3rd reply onwards**, answer ONLY the specific thing the user asked — do NOT repeat overviews, service lists, benefits, or generic info already shared.
+- Keep follow-up answers **short and targeted**: ideally 1-4 sentences or 2-5 bullets max.
+- Do not re-introduce PKN Consultancy or re-list services unless the user explicitly asks again.
+- If the user asks a narrow question (e.g. "documents for GST?", "fees?", "due date?"), reply with ONLY that detail — nothing extra.
+- Never pad replies with unrelated services or upsell unless the user asks.`;
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
