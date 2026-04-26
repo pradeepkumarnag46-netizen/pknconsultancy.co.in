@@ -27,6 +27,7 @@ const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
   const [listening, setListening] = useState(false);
   const recognitionRef = useRef<any>(null);
+  const shouldRestartRef = useRef(false);
   const baseMessageRef = useRef<string>("");
 
   useEffect(() => {
@@ -51,6 +52,7 @@ const Contact = () => {
     }
 
     if (listening) {
+      shouldRestartRef.current = false;
       recognitionRef.current?.stop();
       return;
     }
@@ -60,32 +62,64 @@ const Contact = () => {
     recognition.interimResults = true;
     recognition.lang = "en-IN";
 
-    baseMessageRef.current = form.message ? form.message + " " : "";
+    // baseMessageRef holds everything already finalized (existing text + finalized speech)
+    baseMessageRef.current = form.message ? form.message.replace(/\s+$/, "") + " " : "";
 
     recognition.onresult = (event: any) => {
-      let transcript = "";
+      let interim = "";
       for (let i = event.resultIndex; i < event.results.length; i++) {
-        transcript += event.results[i][0].transcript;
+        const result = event.results[i];
+        const text = result[0].transcript;
+        if (result.isFinal) {
+          // Append finalized text permanently to base so next chunk does not overwrite it
+          baseMessageRef.current = (baseMessageRef.current + text).replace(/\s+/g, " ");
+          if (!baseMessageRef.current.endsWith(" ")) baseMessageRef.current += " ";
+        } else {
+          interim += text;
+        }
       }
-      setForm((prev) => ({ ...prev, message: (baseMessageRef.current + transcript).slice(0, 1000) }));
+      setForm((prev) => ({
+        ...prev,
+        message: (baseMessageRef.current + interim).slice(0, 1000),
+      }));
     };
 
     recognition.onerror = (event: any) => {
+      if (event.error === "no-speech" || event.error === "aborted") return;
+      shouldRestartRef.current = false;
       setListening(false);
-      if (event.error !== "aborted" && event.error !== "no-speech") {
+      if (event.error === "not-allowed" || event.error === "service-not-allowed") {
         toast({
-          title: "Voice input error",
+          title: "Microphone blocked",
           description: "Please allow microphone access and try again.",
           variant: "destructive",
         });
       }
     };
 
-    recognition.onend = () => setListening(false);
+    // Auto-restart on end (browsers stop recognition after ~1s of silence)
+    recognition.onend = () => {
+      if (shouldRestartRef.current) {
+        try {
+          recognition.start();
+        } catch {
+          setListening(false);
+          shouldRestartRef.current = false;
+        }
+      } else {
+        setListening(false);
+      }
+    };
 
     recognitionRef.current = recognition;
-    recognition.start();
-    setListening(true);
+    shouldRestartRef.current = true;
+    try {
+      recognition.start();
+      setListening(true);
+    } catch {
+      shouldRestartRef.current = false;
+      setListening(false);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
