@@ -20,7 +20,14 @@ Your role:
 - Be concise, professional, and helpful. Use simple English.
 - For specific quotes or detailed cases, direct the user to the Contact page on our website.
 - IMPORTANT: NEVER share or display the phone number, WhatsApp number, email address, or office address in your replies. If a user asks for contact details, simply tell them to visit the Contact page on the website.
-- Do not invent prices, deadlines, or legal advice you are unsure about — instead, suggest booking a consultation via the Contact page.`;
+- Do not invent prices, deadlines, or legal advice you are unsure about — instead, suggest booking a consultation via the Contact page.
+
+Formatting rules (ALWAYS follow):
+- Reply in **Markdown**.
+- **Bold** the most important keywords (service names, deadlines, key terms like **GST**, **ITR**, **TDS**, **Pvt Ltd**, **deadline**, **documents required**).
+- Whenever you list more than one item, steps, documents, or benefits, use a **bulleted list** (\`-\`) or **numbered list** (\`1.\`). Never cram multiple points into one paragraph.
+- Keep each bullet short (one line if possible).
+- Use a brief intro line, then the list, then an optional one-line closing/CTA.`;
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: corsHeaders });
