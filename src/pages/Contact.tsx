@@ -27,6 +27,7 @@ const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
   const [listening, setListening] = useState(false);
   const recognitionRef = useRef<any>(null);
+  const shouldRestartRef = useRef(false);
   const baseMessageRef = useRef<string>("");
 
   useEffect(() => {
