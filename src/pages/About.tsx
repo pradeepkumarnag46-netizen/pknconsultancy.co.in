@@ -91,6 +91,7 @@ const About = () => (
       </div>
     </section>
 
+    <section className="py-20 md:py-28 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
       <div className="container text-center">
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
         <p className="text-lg opacity-90 max-w-xl mx-auto mb-8">
