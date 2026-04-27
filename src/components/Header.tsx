@@ -7,6 +7,7 @@ import logo from "@/assets/pkn-logo.jpg";
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
+  { label: "Team", to: "/team" },
   { label: "Services", to: "/services" },
   { label: "Contact", to: "/contact" },
 ];
