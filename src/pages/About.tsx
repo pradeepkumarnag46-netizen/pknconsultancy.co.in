@@ -118,6 +118,35 @@ const About = () => (
       </div>
     </section>
 
+    <section className="py-20 md:py-28">
+      <div className="container">
+        <div className="text-center mb-14">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Team</h2>
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Experienced professionals dedicated to your business success.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {team.map((m, i) => (
+            <motion.div key={m.name} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={i}>
+              <Card className="h-full border-0 shadow-md hover:shadow-xl transition-shadow overflow-hidden">
+                <div className={`bg-gradient-to-br ${m.accent} p-8 flex flex-col items-center text-center`}>
+                  <div className="w-24 h-24 rounded-full bg-background shadow-lg flex items-center justify-center mb-4 border-4 border-background">
+                    <span className={`font-display font-bold text-3xl ${m.iconColor}`}>{m.initials}</span>
+                  </div>
+                  <h3 className="font-display font-bold text-xl text-foreground">{m.name}</h3>
+                  <p className={`text-sm font-semibold mt-1 ${m.iconColor}`}>{m.role}</p>
+                </div>
+                <CardContent className="p-6">
+                  <p className="text-sm text-muted-foreground leading-relaxed">{m.bio}</p>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+
     <section className="py-20 md:py-28 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
       <div className="container text-center">
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
