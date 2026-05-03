@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/pkn-logo.jpg";
+import logo from "@/assets/pkn-logo.png";
 
 const navLinks = [
   { label: "Home", to: "/" },
