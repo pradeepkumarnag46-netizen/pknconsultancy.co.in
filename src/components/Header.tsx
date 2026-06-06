@@ -20,7 +20,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container flex items-center justify-between h-16 md:h-20 gap-3">
         <Link to="/" className="flex items-center gap-3 min-w-0">
-          <img src={logo} alt="PKN Consultancy logo" className="h-10 md:h-14 w-auto object-contain shrink-0 bg-white rounded-lg p-1 shadow-md" />
+          <img src={logo} alt="PKN Consultancy logo" className="h-10 md:h-14 w-auto object-contain shrink-0" />
           <div className="hidden sm:flex flex-col leading-tight min-w-0">
             <span className="font-display font-bold text-base md:text-lg text-foreground tracking-tight truncate">PKN Consultancy</span>
             <span className="text-[10px] text-muted-foreground tracking-widest uppercase truncate">Business & Tax Solutions</span>
