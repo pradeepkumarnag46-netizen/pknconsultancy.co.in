@@ -26,7 +26,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <img src={logo} alt="PKN Consultancy logo" className="w-10 h-10 rounded-lg object-contain bg-white p-1 shadow-md" />
+            <img src={logo} alt="PKN Consultancy logo" className="w-10 h-10 object-contain" />
             <span className="font-display font-bold text-lg">PKN Consultancy</span>
           </div>
           <p className="text-sm opacity-70 leading-relaxed mb-6">
