@@ -118,7 +118,7 @@ const Index = () => (
     </section>
 
     {/* Trust Indicators */}
-    <section className="py-12 border-b border-border bg-card">
+    <section className="py-12 border-y border-border bg-gradient-to-r from-card via-accent/40 to-card">
       <div className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {trustItems.map((t, i) => (
