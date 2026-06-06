@@ -300,7 +300,7 @@ const Index = () => (
     {/* Final CTA */}
     <section className="relative overflow-hidden py-20 md:py-28 bg-gradient-to-br from-primary via-primary to-secondary text-primary-foreground">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,hsl(var(--gold)/0.25),transparent)]" />
-      <div className="container text-center">
+      <div className="container relative text-center">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             Need Help with GST, Tax, or Business Setup?
