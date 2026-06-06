@@ -223,7 +223,7 @@ const Index = () => (
     </section>
 
     {/* How It Works */}
-    <section className="py-20 md:py-28 bg-gradient-to-b from-background via-secondary/5 to-background">
+    <section className="py-20 md:py-28 bg-section-veil">
       <div className="container">
         <div className="text-center mb-14">
           <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-2 block">Process</span>
