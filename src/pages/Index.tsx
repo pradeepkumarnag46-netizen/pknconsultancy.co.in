@@ -139,7 +139,7 @@ const Index = () => (
     </section>
 
     {/* Services */}
-    <section className="py-20 md:py-28">
+    <section className="py-20 md:py-28 bg-gradient-to-b from-background to-accent/30">
       <div className="container">
         <div className="text-center mb-14">
           <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-2 block">What We Offer</span>
