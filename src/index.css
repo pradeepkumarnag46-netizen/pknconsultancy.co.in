@@ -149,4 +149,13 @@
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
   }
+
+  /* Reusable section background utilities backed by gradient tokens. */
+  .bg-hero { background-image: var(--gradient-hero); }
+  .bg-trust-strip { background-image: var(--gradient-trust-strip); }
+  .bg-surface-soft { background-image: var(--gradient-surface-soft); }
+  .bg-surface-card { background-image: var(--gradient-surface-card); }
+  .bg-surface-accent { background-image: var(--gradient-surface-accent); }
+  .bg-section-veil { background-image: var(--gradient-section-veil); }
+  .bg-cta { background-image: var(--gradient-cta); }
 }
