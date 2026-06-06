@@ -80,9 +80,7 @@ const testimonials = [
 const Index = () => (
   <Layout>
     {/* Hero */}
-    <section className="relative overflow-hidden bg-gradient-to-br from-accent via-background to-secondary/10">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(var(--primary)/0.18),transparent)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_90%_90%,hsl(var(--gold)/0.10),transparent)]" />
+    <section className="relative overflow-hidden bg-hero">
       <div className="container relative py-20 md:py-32">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
