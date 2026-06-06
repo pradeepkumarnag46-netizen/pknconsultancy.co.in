@@ -190,7 +190,7 @@ const Index = () => (
     </section>
 
     {/* Why Choose Us */}
-    <section className="py-20 md:py-28 bg-gradient-to-br from-card via-accent/50 to-card">
+    <section className="py-20 md:py-28 bg-surface-card">
       <div className="container">
         <div className="text-center mb-14">
           <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-2 block">Why PKN</span>
