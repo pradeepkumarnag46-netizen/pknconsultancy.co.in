@@ -80,9 +80,7 @@ const testimonials = [
 const Index = () => (
   <Layout>
     {/* Hero */}
-    <section className="relative overflow-hidden bg-gradient-to-br from-accent via-background to-secondary/10">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(var(--primary)/0.18),transparent)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_90%_90%,hsl(var(--gold)/0.10),transparent)]" />
+    <section className="relative overflow-hidden bg-hero">
       <div className="container relative py-20 md:py-32">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
@@ -118,7 +116,7 @@ const Index = () => (
     </section>
 
     {/* Trust Indicators */}
-    <section className="py-12 border-y border-border bg-gradient-to-r from-card via-accent/40 to-card">
+    <section className="py-12 border-y border-border bg-trust-strip">
       <div className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {trustItems.map((t, i) => (
@@ -139,7 +137,7 @@ const Index = () => (
     </section>
 
     {/* Services */}
-    <section className="py-20 md:py-28 bg-gradient-to-b from-background to-accent/30">
+    <section className="py-20 md:py-28 bg-surface-soft">
       <div className="container">
         <div className="text-center mb-14">
           <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-2 block">What We Offer</span>
@@ -192,7 +190,7 @@ const Index = () => (
     </section>
 
     {/* Why Choose Us */}
-    <section className="py-20 md:py-28 bg-gradient-to-br from-card via-accent/50 to-card">
+    <section className="py-20 md:py-28 bg-surface-card">
       <div className="container">
         <div className="text-center mb-14">
           <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-2 block">Why PKN</span>
@@ -225,7 +223,7 @@ const Index = () => (
     </section>
 
     {/* How It Works */}
-    <section className="py-20 md:py-28 bg-gradient-to-b from-background via-secondary/5 to-background">
+    <section className="py-20 md:py-28 bg-section-veil">
       <div className="container">
         <div className="text-center mb-14">
           <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-2 block">Process</span>
@@ -258,7 +256,7 @@ const Index = () => (
     </section>
 
     {/* Testimonials */}
-    <section className="py-20 md:py-28 bg-gradient-to-br from-accent via-card to-accent/60">
+    <section className="py-20 md:py-28 bg-surface-accent">
       <div className="container">
         <div className="text-center mb-14">
           <span className="text-xs font-semibold tracking-widest uppercase text-primary mb-2 block">Testimonials</span>
@@ -298,8 +296,7 @@ const Index = () => (
     </section>
 
     {/* Final CTA */}
-    <section className="relative overflow-hidden py-20 md:py-28 bg-gradient-to-br from-primary via-primary to-secondary text-primary-foreground">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,hsl(var(--gold)/0.25),transparent)]" />
+    <section className="relative overflow-hidden py-20 md:py-28 bg-cta text-primary-foreground">
       <div className="container relative text-center">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} custom={0}>
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
