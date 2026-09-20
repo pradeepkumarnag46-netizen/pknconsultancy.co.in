@@ -125,7 +125,7 @@ const Admin = () => {
 
   return (
     <Layout>
-      <section className="py-12 md:py-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section className="py-12 md:py-16 bg-page-header">
         <div className="container">
           <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
             <div>

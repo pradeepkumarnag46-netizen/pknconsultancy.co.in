@@ -51,7 +51,7 @@ const Auth = () => {
 
   return (
     <Layout>
-      <section className="py-20 md:py-28 min-h-[70vh] flex items-center bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section className="py-20 md:py-28 min-h-[70vh] flex items-center bg-page-header">
         <div className="container max-w-md">
           <Card className="border-0 shadow-lg">
             <CardContent className="p-8">

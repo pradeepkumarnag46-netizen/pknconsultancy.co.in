@@ -152,7 +152,7 @@ const Contact = () => {
 
   return (
     <Layout>
-      <section className="py-20 md:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section className="py-20 md:py-28 bg-page-header">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={0} className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -268,7 +268,7 @@ const Contact = () => {
                 </motion.div>
               ))}
 
-              <Card className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground border-0 mt-6">
+              <Card className="bg-cta text-primary-foreground border-0 mt-6">
                 <CardContent className="p-8 text-center">
                   <CheckCircle2 className="w-10 h-10 mx-auto mb-4 opacity-90" />
                   <h3 className="font-display text-xl font-bold mb-2">Free Consultation</h3>
