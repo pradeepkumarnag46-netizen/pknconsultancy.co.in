@@ -124,7 +124,7 @@ const ServicePage = () => {
 
   return (
     <Layout>
-      <section className="py-20 md:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      <section className="py-20 md:py-28 bg-page-header">
         <div className="container">
           <Link to="/services" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-6 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Services
@@ -175,7 +175,7 @@ const ServicePage = () => {
             </div>
 
             <div className="space-y-6">
-              <Card className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground border-0 sticky top-24">
+              <Card className="bg-cta text-primary-foreground border-0 sticky top-24">
                 <CardContent className="p-8 text-center">
                   <h3 className="font-display text-xl font-bold mb-2">Get Started Today</h3>
                   <p className="text-sm opacity-90 mb-6">Reach out to our experts and we'll guide you through the process.</p>

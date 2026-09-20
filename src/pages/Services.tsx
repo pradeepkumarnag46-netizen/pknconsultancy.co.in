@@ -27,7 +27,7 @@ const allServices = [
 
 const Services = () => (
   <Layout>
-    <section className="py-20 md:py-28 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+    <section className="py-20 md:py-28 bg-page-header">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={0} className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -65,7 +65,7 @@ const Services = () => (
       </div>
     </section>
 
-    <section className="py-20 md:py-28 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
+    <section className="py-20 md:py-28 bg-cta text-primary-foreground">
       <div className="container text-center">
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Need a Custom Solution?</h2>
         <p className="text-lg opacity-90 max-w-xl mx-auto mb-8">
