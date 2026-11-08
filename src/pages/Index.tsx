@@ -9,6 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
+import businessGrowthHero from "@/assets/business-growth-hero.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -81,6 +82,15 @@ const Index = () => (
   <Layout>
     {/* Hero */}
     <section className="relative overflow-hidden bg-hero">
+      <img
+        src={businessGrowthHero}
+        alt=""
+        aria-hidden="true"
+        width={1600}
+        height={900}
+        className="absolute inset-0 h-full w-full object-cover object-[70%_center] opacity-60 md:object-center"
+      />
+      <div className="absolute inset-0 bg-background/25" />
       <div className="container relative py-20 md:py-32">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div initial="hidden" animate="visible" variants={fadeUp} custom={0}>
