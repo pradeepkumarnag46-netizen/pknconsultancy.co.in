@@ -4,6 +4,7 @@ import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/Layout";
+import businessGrowthHero from "@/assets/business-growth-hero.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -39,8 +40,10 @@ const team = [
 
 const Team = () => (
   <Layout>
-    <section className="py-20 md:py-28 bg-page-header">
-      <div className="container">
+    <section className="relative overflow-hidden py-20 md:py-28 bg-page-header">
+      <img src={businessGrowthHero} alt="" aria-hidden="true" width={1600} height={900} className="absolute inset-0 h-full w-full object-cover object-[30%_center] opacity-60" />
+      <div className="absolute inset-0 bg-background/25" />
+      <div className="container relative">
         <div className="max-w-3xl mx-auto text-center">
           <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={0} className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6">
             Meet Our <span className="text-gradient">Team</span>
