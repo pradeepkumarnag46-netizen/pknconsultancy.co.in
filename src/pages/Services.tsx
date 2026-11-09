@@ -29,7 +29,7 @@ const allServices = [
 const Services = () => (
   <Layout>
     <section className="relative overflow-hidden py-20 md:py-28 bg-page-header">
-      <img src={servicesLedgerBackground} alt="" aria-hidden="true" width={1600} height={900} className="absolute inset-0 h-full w-full object-cover object-[58%_center] opacity-60 md:object-center" />
+      <img src={servicesLedgerBackground} alt="" aria-hidden="true" width={1600} height={900} className="absolute inset-0 h-full w-full object-contain opacity-60" />
       <div className="absolute inset-0 bg-background/25" />
       <div className="container relative">
         <div className="max-w-3xl mx-auto text-center">
