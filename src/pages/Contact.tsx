@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import Layout from "@/components/Layout";
 import { supabase } from "@/integrations/supabase/client";
-import businessGrowthHero from "@/assets/business-growth-hero.jpg";
+import contactConversationBackground from "@/assets/contact-conversation-background.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -154,7 +154,7 @@ const Contact = () => {
   return (
     <Layout>
       <section className="relative overflow-hidden py-20 md:py-28 bg-page-header">
-        <img src={businessGrowthHero} alt="" aria-hidden="true" width={1600} height={900} className="absolute inset-0 h-full w-full object-cover object-center opacity-60" />
+        <img src={contactConversationBackground} alt="" aria-hidden="true" width={1600} height={900} className="absolute inset-0 h-full w-full object-cover object-[48%_center] opacity-60 md:object-center" />
         <div className="absolute inset-0 bg-background/25" />
         <div className="container relative">
           <div className="max-w-3xl mx-auto text-center">
