@@ -126,7 +126,7 @@ const ServicePage = () => {
   return (
     <Layout>
       <section className="relative overflow-hidden py-20 md:py-28 bg-page-header">
-        <img src={servicesLedgerBackground} alt="" aria-hidden="true" width={1600} height={900} className="absolute inset-0 h-full w-full object-cover object-[58%_center] opacity-60 md:object-center" />
+        <img src={servicesLedgerBackground} alt="" aria-hidden="true" width={1600} height={900} className="absolute inset-0 h-full w-full object-contain opacity-60" />
         <div className="absolute inset-0 bg-background/25" />
         <div className="container relative">
           <Link to="/services" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-6 transition-colors">
