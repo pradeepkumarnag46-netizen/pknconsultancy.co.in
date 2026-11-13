@@ -1,1 +1,1 @@
-- [ ] Show the complete Services-page background image without the current crop; verify phone and desktop.
+- [x] Show the Services-page background across the full banner width on phone and desktop, and verify both views.
