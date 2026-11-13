@@ -88,7 +88,7 @@ const Index = () => (
         aria-hidden="true"
         width={1600}
         height={900}
-        className="absolute inset-0 h-full w-full object-contain opacity-60"
+        className="absolute inset-0 h-full w-full object-cover opacity-60"
       />
       <div className="absolute inset-0 bg-background/25" />
       <div className="container relative py-20 md:py-32">
